@@ -8,8 +8,8 @@ export const store = new Store<State>({
   count: 0,
 });
 
-export function add(count: number) {
-  store.setState((state) => {
+export function addCount(count: number) {
+  return store.setState((state) => {
     return {
       ...state,
       count: state.count + count,
@@ -17,8 +17,8 @@ export function add(count: number) {
   });
 }
 
-export function sub(count: number) {
-  store.setState((state) => {
+export function subCount(count: number) {
+  return store.setState((state) => {
     return {
       ...state,
       count: state.count - count,
