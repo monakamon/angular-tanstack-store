@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, input} from '@angular/core';
+import {injectStore} from "@tanstack/angular-store";
+import {store} from "./store";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [],
+  styleUrl: './app.component.scss',
+  template: `
+    <div>{{ $animal() }}: {{ $count() }}</div>
+`,
 })
 export class AppComponent {
-  title = 'angular-tanstack-store';
+  protected $animal = input.required<string>();
+  protected $count = injectStore(
+    store, (state) => {
+      return state[this.$animal()]
+    }
+  );
 }
