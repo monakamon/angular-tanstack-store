@@ -1,16 +1,27 @@
 import { Store } from '@tanstack/store';
 
-// You can use @tanstack/store outside of App components too!
-export const store = new Store({
-  dogs: 0,
-  cats: 0,
+export interface State {
+  count: number;
+}
+
+export const store = new Store<State>({
+  count: 0,
 });
 
-export function updateState(animal: 'dogs' | 'cats') {
+export function add(count: number) {
   store.setState((state) => {
     return {
       ...state,
-      [animal]: state[animal] + 1,
+      count: state.count + count,
+    };
+  });
+}
+
+export function sub(count: number) {
+  store.setState((state) => {
+    return {
+      ...state,
+      count: state.count - count,
     };
   });
 }
