@@ -8,6 +8,10 @@ export const store = new Store<State>({
   count: 0,
 });
 
+store.subscribe(() => {
+  console.log('change state', store.state);
+});
+
 export function addCount(count: number) {
   return store.setState((state) => {
     return {
