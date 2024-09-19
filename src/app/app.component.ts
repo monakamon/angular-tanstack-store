@@ -6,7 +6,6 @@ import { addCount, store, subCount } from './store';
   selector: 'app-root',
   standalone: true,
   imports: [],
-  styleUrl: './app.component.scss',
   template: `<div style="display: flex; gap: 8px">
     <button (click)="addCount(1)">+</button>
     <div>{{ $count() }}</div>
