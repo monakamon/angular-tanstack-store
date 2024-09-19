@@ -1,13 +1,9 @@
-
-
 /**
  * @type {import("prettier").Config}
  */
 const config = {
-  trailingComma: "es5",
-  tabWidth: 4,
-  semi: false,
-  singleQuote: true,
-};
+    trailingComma: 'es5',
+    plugins: ['prettier-plugin-organize-imports'],
+}
 
-export default config;
+export default config
