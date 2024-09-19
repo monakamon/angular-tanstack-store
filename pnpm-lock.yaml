@@ -32,6 +32,9 @@ importers:
       '@angular/router':
         specifier: ^18.2.0
         version: 18.2.5(@angular/common@18.2.5(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.5(@angular/animations@18.2.5(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.5(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1)
+      '@tanstack/angular-store':
+        specifier: 0.5.5
+        version: 0.5.5(@angular/common@18.2.5(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))
       rxjs:
         specifier: ~7.8.0
         version: 7.8.1
@@ -1675,6 +1678,15 @@ packages:
 
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
+
+  '@tanstack/angular-store@0.5.5':
+    resolution: {integrity: sha512-JQLlu08qVydE854QZ7RzNbhVp6HGjScAI8vQBq1afCFyqW/+8CDiiIjofBS4N5+HidikQoum3+LhPeRdWBoVFQ==}
+    peerDependencies:
+      '@angular/common': '>=16 < 18'
+      '@angular/core': '>=16 < 18'
+
+  '@tanstack/store@0.5.5':
+    resolution: {integrity: sha512-EOSrgdDAJExbvRZEQ/Xhh9iZchXpMN+ga1Bnk8Nmygzs8TfiE6hbzThF+Pr2G19uHL6+DTDTHhJ8VQiOd7l4tA==}
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -6384,6 +6396,15 @@ snapshots:
   '@sindresorhus/merge-streams@2.3.0': {}
 
   '@socket.io/component-emitter@3.1.2': {}
+
+  '@tanstack/angular-store@0.5.5(@angular/common@18.2.5(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))':
+    dependencies:
+      '@angular/common': 18.2.5(@angular/core@18.2.5(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1)
+      '@angular/core': 18.2.5(rxjs@7.8.1)(zone.js@0.14.10)
+      '@tanstack/store': 0.5.5
+      tslib: 2.7.0
+
+  '@tanstack/store@0.5.5': {}
 
   '@tufjs/canonical-json@2.0.0': {}
 
